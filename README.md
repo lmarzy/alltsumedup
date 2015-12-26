@@ -1,2 +1,3 @@
 # alltsumedup
-Tsum Tsum blog of Tilly Marsden
+
+AllTsumedUp -  A new Tsum Tsum blog by Tilly Marsden
