@@ -1,0 +1,17 @@
+/* ==========================================================================
+   UTILITIES/HELPERS - WIDTHS
+   ========================================================================== */
+
+if imports.utilities.widths {
+
+  widths('u-');
+
+  for item in breakpoints {
+
+    +bp(item) {
+        widths('u-bp' + item + '-');
+    }
+
+  }
+
+} //end if

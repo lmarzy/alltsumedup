@@ -1,0 +1,58 @@
+/* ==========================================================================
+   UTILITIES/HELPERS - VISIBILITY
+   ========================================================================== */
+
+if imports.utilities.visibility {
+
+	.is-visible, $visible {
+		display: block !important;
+	}
+	.is-hidden, $hide {
+		display: none !important;
+	}
+	.is-vh, $vh {
+		{is-vh};
+	}
+
+	@media only screen {
+		.hide-default {
+			display: none;
+		}
+		.hide-default-up {
+			display: none;
+		}
+	}
+
+	arr = ('default');
+	i = 0;
+
+	for key in breakpoints {
+		push(arr, key);
+	}
+
+	for prop, value in breakpoints {
+
+		+bp(prop) {
+
+			if (arr[i] == 'default') {
+				.hide-default {
+					display: inherit;
+				}
+			}
+			else {
+				.hide-bp-{arr[i]} {
+					display: inherit;
+				}
+			}
+
+	    .hide-bp-{prop}, .hide-bp-{prop}-up {
+			  display: none;
+			}
+		}
+
+		i = i + 1;
+
+	} // END for
+
+
+} // END IF

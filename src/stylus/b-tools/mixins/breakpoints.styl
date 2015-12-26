@@ -1,0 +1,27 @@
+
+/* ==========================================================================
+   TOOLS - MIXINS - BREAKPOINTS
+   ========================================================================== */
+
+bp(breakpoint, direction = min) {
+	if (direction == min) {
+		@media ({direction}-width: rem(breakpoints[breakpoint])) {
+			{block}
+		}
+	}
+	else {
+		@media ({direction}-width: rem(breakpoints[breakpoint] - 1)) {
+			{block}
+		}
+	}
+}
+
+bp-min-max(min, max) {
+	@media (min-width: rem(breakpoints[min])) and (max-width: rem(breakpoints[max] - 1 )) {
+		{block}
+	}
+}
+
+// Usage
+// @include bp(10) {}
+// @include bp(10, max) {}

@@ -1,0 +1,20 @@
+/* ==========================================================================
+   UTILITIES/HELPERS - COLOURS
+   ========================================================================== */
+
+if imports.utilities.colours {
+
+	// colours
+	for prop, value in colours.brand {
+
+		.colour-{prop} {
+			color: value !important;
+		}
+
+		.bgcolour-{prop} {
+			background: value !important;
+		}
+
+	}
+
+} // END OF

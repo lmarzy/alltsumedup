@@ -1,0 +1,60 @@
+/* ==========================================================================
+   TOOLS - MIXINS - BURGER
+   ========================================================================== */
+
+burger(bgColour, bgLine, bgLineActive) {
+	position: relative;
+	display: block;
+	width: rem(60px);
+	height: rem(48px);
+	background-color: bgColour;
+
+		span:first-child, &:before, &:after {
+			// $extends $pseudos;
+			left: rem(12px);
+			right: rem(12px);
+			height: rem(6px);
+			background: bgLine;
+			border-radius: border-radius;
+			transition: top 300ms 600ms ease, bottom 300ms 600ms ease, transform 300ms ease;
+		}
+		span:first-child {
+			top: 50%;
+			margin-top: rem(-3px);
+		}
+		&:before {
+			top: rem(10px);
+		}
+		&:after {
+			bottom: rem(10px);
+		}
+
+		.nav-is-active & {
+			&:before, &:after {
+				background: bgLineActive;
+				transition: top 300ms ease, bottom 300ms ease, transform 300ms 600ms ease;
+			}
+
+			span:first-child {
+				background: transparent;
+			}
+
+			&:before {
+				top: 50%;
+				margin-top: rem(-3px);
+				transform: rotate(45deg);
+			}
+
+			&:after {
+				bottom: 50%;
+				margin-bottom: rem(-3px);
+				transform: rotate(-45deg);
+			}
+		}
+}
+
+/*
+--usage
+--burger(bgColour, bgLine, bgLineActive);
+--e.g. burger(white, grey, red);
+*/

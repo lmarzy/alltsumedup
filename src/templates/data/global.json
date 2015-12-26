@@ -1,0 +1,11 @@
+{
+
+	"metaAuthor": "Lee Marsden",
+	"siteName": "Kickstart - Gulp",
+
+	"siteNav": [
+		{ "linkName": "Link one", "linkUrl": "/" },
+		{ "linkName": "Link two", "linkUrl": "/" }
+	]
+
+}

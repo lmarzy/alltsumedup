@@ -1,0 +1,65 @@
+if imports.base.inputs {
+
+/* ==========================================================================
+   BASE - INPUTS
+   ========================================================================== */
+
+	select, textarea, input[type=text], input[type=search], input[type=url], input[type=number], input[type=password], input[type=tel], input[type=email] {
+		height: $input-height;
+		padding: $input-padding;
+		border-width: $input-border-width;
+		border-style: $input-border-style;
+		border-color: colour(main, borders);
+		border-radius: 0;
+		vertical-align: middle;
+		-webkit-appearance: none;
+
+			&:focus {
+				outline: none;
+			}
+
+			&:hover {}
+
+	}
+
+	:-moz-placeholder {
+	    	color: $placeholder-colour;
+	}
+	::-webkit-input-placeholder {
+	    color: $placeholder-colour;
+	}
+
+	input[type="checkbox"],
+	input[type="radio"] {
+		width: auto;
+		margin-right: toRem(4px);
+	}
+
+	input[disabled],
+	select[disabled],
+	textarea[disabled],
+	input[readonly],
+	select[readonly],
+	textarea[readonly] {
+		cursor: default;
+		opacity : .25;
+	}
+
+} // END IF
+
+// typical form markup
+// <form>
+// 	<fieldset>
+// 		<legend></legend>
+// 		<ul>
+// 			<li>
+// 				<label></label>
+// 				<input type="text">
+// 			</li>
+// 			<li>
+// 				<label></label>
+// 				<input type="text">
+// 			</li>
+// 		</ul>
+// 	</fieldset>
+// </form>

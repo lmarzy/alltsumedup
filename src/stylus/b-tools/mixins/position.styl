@@ -1,0 +1,39 @@
+/* ==========================================================================
+   TOOLS - MIXINS - POSITION
+   ========================================================================== */
+
+pos(prop, t, r, b, l) {
+	position: prop;
+
+	if (t != null) {
+		top: rem(t);
+	}
+	if (r != null) {
+		right: rem(r);
+	}
+	if (b != null) {
+		bottom: rem(b);
+	}
+	if (l != null) {
+		left: rem(l);
+	}
+
+}
+
+pos-absolute(t, r, b, l) {
+	pos(absolute, t, r, b, l);
+}
+
+pos-fixed(t, r, b, l) {
+	pos(fixed, t, r, b, l);
+}
+
+pos-relative(t, r, b, l) {
+	pos(relative, t, r, b, l);
+}
+
+/*
+--usage
+--absolute(t, r, b, l);
+--e.g. absoute(10px, 10px, null, null);
+*/

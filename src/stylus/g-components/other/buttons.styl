@@ -1,0 +1,59 @@
+/* ==========================================================================
+   COMPONENTS/OTHER - BUTTONS
+   ========================================================================== */
+
+if imports.components.other.buttons {
+
+	button.c-btn, a.c-btn {
+		display: inline-block;
+		height: input-height;
+		padding: input-padding;
+		font: inherit;
+		line-height: input-height;
+		text-align: center;
+		text-decoration: none;
+		vertical-align: middle;
+		border-width: btn-border-width;
+		border-style: btn-border-style;
+		cursor: pointer;
+
+			&:hover, &:active, &:focus &:visited {
+
+			}
+
+			&--a {
+				background: white;
+				border-color: colours.main.borders;
+				color: black;
+
+					&:hover, &:focus, &:active, &:visited, &.btn-disabled, &[disabled] {
+
+					}
+			}
+
+			&--tiny {
+				font-size: em(btn-tiny);
+			}
+
+			&--small {
+				font-size: em(btn-small);
+			}
+			&--large {
+				font-size: em(btn-large);
+			}
+
+			&--huge {
+				font-size: em(btn-huge);
+			}
+	}
+
+	// disabled buttons
+
+	button[disabled], button.c-btn--disabled, a.c-btn--disabled {
+		opacity: .4;
+		cursor: default;
+
+			&:hover { opacity: .4; }
+	}
+
+} // END IF

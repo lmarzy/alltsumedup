@@ -1,0 +1,32 @@
+if imports.objects.media {
+
+/* ==========================================================================
+   OBJECTS - MEDIA
+   ========================================================================== */
+
+    .o-media {
+        display: table;
+        width: 100%;
+
+            &__img,
+            &__body {
+                display: table-cell;
+                vertical-align: top;
+            }
+
+            &__img {
+                padding-right: base-spacing;
+
+                    img {
+                        display: block;
+                        max-width: none;
+                    }
+            }
+
+            &__body {
+                width: 100%;
+            }
+
+    }
+
+}// END IF

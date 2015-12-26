@@ -1,0 +1,36 @@
+/* ==========================================================================
+   BASE - ROOT
+   ========================================================================== */
+
+html {
+  font-family 			 						: font-family;
+  font-size 				 						: 100%;
+  line-height 			  					: unit((line-height / font-size), '');
+  background                		: colours.main.bg;
+  color                     		: colours.main.text;
+  box-sizing 										: border-box;
+  -ms-text-size-adjust 					: 100%;
+	-webkit-text-size-adjust 			: 100%;
+	-webkit-font-smoothing 				: antialiased;
+	-moz-osx-font-smoothing 			: grayscale;
+	-webkit-tap-highlight-color 	: transparent;
+
+  for item in breakpoints {
+    +bp(item) {
+      &:before {
+        content: 'bp' + item;
+        display: none;
+      }
+    }
+  }
+
+}
+
+*, *:before, *:after {
+  box-sizing: inherit
+}
+
+body {
+  width: 100%;
+  min-height: 100%;
+}

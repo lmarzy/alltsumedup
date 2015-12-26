@@ -1,0 +1,22 @@
+/* ==========================================================================
+   TOOLS - MIXINS - DL-INLINE
+   ========================================================================== */
+
+dl-inline(dtWidth, ddWidth) {
+	margin-bottom: 0;
+	dt, dd {
+		float: left;
+	}
+	dt {
+		width: dtWidth
+	}
+	dd {
+		width: ddWidth;
+	}
+}
+
+/*
+--usage
+--dl-inline(dtWidth, ddWidth);
+--e.g. dl-inline(50%, 50%);
+*/

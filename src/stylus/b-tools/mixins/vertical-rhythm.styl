@@ -1,0 +1,20 @@
+/* ==========================================================================
+   TOOLS - MIXINS - VERTICAL-RHYTHM
+   ========================================================================== */
+
+vr(size, multiplier = 1, margin-bottom = null) {
+
+    font-size: (size / font-size)rem;
+    line-height: unit(ceil(size / line-height) * ((line-height * multiplier) / size), '');
+
+   	if (margin-bottom != null) {
+			margin-bottom 	: base-spacing * margin-bottom;
+		}
+
+}
+
+/*
+--usage
+--vr(fontSize, multiplier(optional), marginBottom(optional));
+--e.g.vr(20px,1, 1);
+*/

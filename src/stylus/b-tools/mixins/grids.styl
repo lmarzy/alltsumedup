@@ -1,0 +1,24 @@
+/* ==========================================================================
+   TOOLS - MIXINS - GRIDS
+   ========================================================================== */
+
+grid(x, y = 1) {
+	width: (100% / x) * y;
+	float: left;
+	padding-left: base-spacing;
+}
+
+grid-width(x, y = 1) {
+	width: (100% / x) * y;
+}
+
+grid-push(x, y = 1) {
+	margin-left: (100% / x) * y;
+}
+
+/*
+--Usage
+--@include grid(2) {}
+--2 = half, 4 = quarter, 10 = tenth etc...
+--pass in a y value to get multiples of the x value e.g. for 3 quarters use: @include grid(4, 3) {}
+*/

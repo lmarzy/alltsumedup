@@ -1,0 +1,5 @@
+<header class="c-site-header">
+
+		<h1 class="c-logo">{{ siteName }}</h1>
+
+</header> <!-- !END header.c-site-header -->
